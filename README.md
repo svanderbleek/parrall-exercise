@@ -1,0 +1,3 @@
+## $
+
+The main parallelism example is the Barnes-Hut algorithm for solving the n-body problem in physics. Barnes-Hut is an example of a “tree-based” method, invented by Andrew Appel, for solving this well-known problem. At a high level the main idea is to decompose space into octants (or quadrants if you’re working in the plane), recursively solving the problem for each octant and then combining the solutions to make an overall solution. The key idea is to use an approximation for bodies that are far enough away—a distant constellation can be regarded as an atomic body for the purposes of calculating the effects of its stars on the sun, say. The problem is naturally parallelizable, because of the recursive decomposition.
